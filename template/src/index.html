@@ -2,10 +2,13 @@
 <html>
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
+  <!--top menu -->
   <div class="section section--header">
     <div class="container">
       <img class="main-logo" src="./images/logo.png" alt="noodlehouses.ca logo">
@@ -17,8 +20,257 @@
       </ul>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script defer="defer" src="js/main.js"></script>
+  <!--home main-->
+  <div class="section section--home">
+    <div class="container">
+      <div class="left-content">
+        <img src="./images/pho-text.png" class="pho-text" alt="pho image text">
+        <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+        <a class="btn">Go to menu now</a>
+      </div>
+      <div class="right-content">
+        <div class="main-img">
+          <img src="./images/pho-main.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--best sell-->
+  <div class="section section--bestsell">
+    <div class="container">
+      <div class="wrapper">
+        <div class="left-content">
+          <img src="./images/best-sell-img.jpg">
+        </div>
+        <div class="right-content">
+          <span class="sub-title">ABOUT</span><br>
+          <span class="title fw-bold">Most popular.</span>
+          <p>(Our food may contain or contact with allergens. Please let us know if you have any food allergies.)</p>
+          <a class="btn">Order now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--menu-->
+  <div class="section section--menu">
+    <div class="container">
+      <div class="title fw-bold">OUR MENU</div>
+      <div class="location" data-locale="">
+        <div class="location--placeholder">
+          please choose restaurent location...
+        </div>
+        <ul class="location--list">
+          <li class="location--item" data-locale="1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8">1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8</li>
+          <li class="location--item" data-locale="4015 Hastings St, Burnaby, BC V5C 2J1">4015 Hastings St, Burnaby, BC V5C 2J1</li>
+        </ul>
+      </div>
+      <!-- <ul class="menu-list">
+        <li class="menu-item active" title="APPETIZERS">APPETIZERS</li>
+        <li class="menu-item">SALADS</li>
+        <li class="menu-item">SOUPS</li>
+        <li class="menu-item">VERMICELLI</li>
+        <li class="menu-item">FROM THE GRILL</li>
+        <li class="menu-item">PHO</li><br>
+        <li class="menu-item">SIZZLING PLATES</li>
+        <li class="menu-item">THAI DISHES</li>
+        <li class="menu-item">STIR FRY DISHES</li>
+        <li class="menu-item">DESSERTS</li>
+        <li class="menu-item">BEVERAGES</li>
+        <li class="menu-item">EXTRA</li>
+      </ul> -->
+      <div class="carousel-wrapper">
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="wrapper">
+            <div class="prod-img">
+              <div class="prod-img--cover">
+                <img src="./images/prod-temp.jpg">
+              </div>
+            </div>
+            <div class="prod-name">Thai Dishes</div>
+            <div class="prod-price fw-bold">$20 - $30</div>
+            <a href="#" class="prod-link">Order now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section--opentime">
+    <div class="container">
+      <div class="section-title fw-bold">
+        OPEN TIME
+      </div>
+
+      <div class="timeline">
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-1">Mon</div>
+            <div class="timer--bar timer--bar-1"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              9<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-2">Tue</div>
+            <div class="timer--bar timer--bar-2"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              9<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-3">Wed</div>
+            <div class="timer--bar timer--bar-3"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              9<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-4">Thu</div>
+            <div class="timer--bar timer--bar-4"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              9<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-5">Fri</div>
+            <div class="timer--bar timer--bar-5"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              10<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-6">Sat</div>
+            <div class="timer--bar timer--bar-6"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              11<span>am</span><br>
+              10<span>pm</span>
+            </p>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer-cover">
+            <div class="timer--name-7">Sun</div>
+            <div class="timer--bar timer--bar-7"></div>
+          </div>
+          <div class="timer-text fw-bold">
+            <p>
+              12<span>am</span><br>
+              9<span>pm</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callUs">
+        Call us <a href="tel:+16049459597" class="phone fw-bold">(604)-945-9597</a>
+      </div>
+    </div>
+  </div>
+  <div class="section section--map">
+    <div class="container">
+      <img src="./images/map.jpg" alt="noodlehouse map">
+    </div>
+  </div>
+  <div class="section section--copyright">
+    <div class="container">
+      <div class="text contact">
+        <a href="tel:+16049459597">(604)-945-9597</a><br>
+        1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8<br>
+        4015 Hastings St, Burnaby, BC V5C 2J1
+      </div>
+      <div class="text copyright">
+        © Copyright 2010 NooldeHouse.ca<br>
+        All right reserved Design by NoodleHouses.ca
+      </div>
+    </div>
+  </div>
+  <!-- <script defer="defer" src="js/main.js"></script> -->
 </body>
 
 </html>
