@@ -93,4 +93,18 @@ $(document).ready(function () {
     }
   })
 
+  //------------load menu--------------
+
+  $.ajax({
+		url: 'includes/load_food.php' ,
+		type: "GET",
+		data: "action=load_menu",
+		success: function(data){
+			console.log(data)
+		},
+		error:function(){
+
+		}
+  });
+
 });

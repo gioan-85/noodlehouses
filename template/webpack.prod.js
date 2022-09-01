@@ -44,6 +44,10 @@ module.exports = merge(common,{
           from: path.resolve(__dirname, './src/fonts/'),
           to: path.resolve(__dirname, './dist/fonts/')
         },
+        {
+          from: path.resolve(__dirname, './src/includes/'),
+          to: path.resolve(__dirname, './dist/includes/')
+        },
         // {
         //   from: path.resolve(__dirname, './src/js/'),
         //   to: path.resolve(__dirname, './dist/js/')
