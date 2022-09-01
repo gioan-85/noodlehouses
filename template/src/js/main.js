@@ -70,13 +70,26 @@ $(document).ready(function () {
     }
   })
 
-  $('.nav-item').on('click', function(){
+  $('.nav-item, .btn-goto').on('click', function(){
     let section = $(this).data('content')
+
+    $('.nav-item').removeClass('active')
+    $('.section--header').find('.nav-item').each(function(i,e){
+      if ($(this).data('content') == section)
+          $(this).addClass('active')
+    })
 
     if (section) {
       $('body, html').animate({
         scrollTop: $('.' + section).offset().top - $('.section--header').height()
       },500)
+    }
+
+    if (window.innerWidth <= 768) {
+      $('.nav-bar').removeClass('toggle_MO')
+      setTimeout(function(){
+        $('.nav-bar-cover').fadeOut()
+      }, 300);
     }
   })
 
