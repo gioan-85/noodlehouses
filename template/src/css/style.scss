@@ -112,6 +112,60 @@ img {
   padding: 60px 30px;
 }
 
+.btn-close {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 10px 10px 10px 20px;
+
+  &::after,
+  &::before{
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background: $brand-white;
+    content: '';
+    border-radius: 3rem;
+  }
+
+  &::after {
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+}
+
+li.location--item {
+  height: 40px;
+  padding: 0 10px;
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid $brand-white;
+  display: flex;
+  align-items: center;
+  font-size: $font-size-small;
+  color: $brand-grey;
+  cursor: pointer;
+
+  a {
+    text-decoration: unset;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
 .section--header {
   height: 92px;
   min-height: unset;
@@ -157,6 +211,7 @@ img {
       position: relative;
       cursor: pointer;
       margin: 0 5px;
+      height: fit-content;
 
       &:last-child {
         padding-right: 0;
@@ -238,36 +293,6 @@ img {
         &:hover {
           color: $brand-white;
           background: rgba(255,255,255,0.3);
-        }
-      }
-
-      .btn-close-menu {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        position: relative;
-        display: block;
-        margin: 10px 10px 10px 20px;
-
-        &::after,
-        &::before{
-          width: 100%;
-          height: 3px;
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 50%;
-          background: $brand-white;
-          content: '';
-          border-radius: 3rem;
-        }
-
-        &::after {
-          transform: translate(0, -50%) rotate(45deg);
-        }
-
-        &::before {
-          transform: translate(0, -50%) rotate(-45deg);
         }
       }
     }
@@ -519,22 +544,6 @@ img {
       overflow: hidden;
       border: 1px solid $brand-white;
       display: none;
-
-      li {
-        height: 40px;
-        padding: 0 10px;
-        background: rgba(255,255,255,0.8);
-        border-bottom: 1px solid $brand-white;
-        display: flex;
-        align-items: center;
-        font-size: $font-size-small;
-        color: $brand-grey;
-        cursor: pointer;
-
-        &:last-child {
-          border-bottom: 0;
-        }
-      }
     }
   }
 
@@ -640,6 +649,7 @@ img {
         font-size: $font-size-small;
         color: $brand-white;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
@@ -942,7 +952,8 @@ img {
   background: #ededed;
 
   .container {
-    padding: 20px 0 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     min-height: unset;
     display: flex;
     flex-direction: row;
@@ -977,6 +988,63 @@ img {
       &.copyright {
         text-align: center;
       }
+    }
+  }
+}
+
+.popup-location {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+
+  .dimmer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .wrapper {
+    width: calc(100% - 60px);
+    max-height: calc(100% - 60px);
+    max-width: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    padding: 30px;
+
+    .btn-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin: 0;
+
+      &::before,
+      &::after {
+        background: $brand-grey;
+      }
+    }
+
+    .location--list {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    li.location--item {
+      padding: 0;
+      background: transparent;
     }
   }
 }

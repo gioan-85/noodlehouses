@@ -2,7 +2,7 @@
 
 
 
-require_once("application_top.php");
+require_once("includes/application_top.php");
 
 // require_once("get_location_time.php");
 
@@ -285,18 +285,38 @@ if($_GET['action'] == 'add_bill')
 
 }
 
-if($_GET['action'] == 'load_menu') {
-	$query = "select * from menu where menu.STATUS = 1 ORDER BY RATE";
+if($action == 'load_menu') {
+	$location = $_POST["location"];
+	if ($location == 'null') {
+		$query = "select * from menu where menu.STATUS = 1 ORDER BY RATE";
+	} else {
+		$query = "select * from menu where menu.STATUS = 1 and menu.LOCATION like '%" . $location . "%' ORDER BY RATE";
+	}
+
 
 	$result = tep_db_query($query);
+	// $menu = [];
+	while ( $element = tep_db_fetch_array($result)) {
+		// push_arry($menu, $element["NAME"]);
+		echo $element["NAME"] . ';';
+	}
+}
 
-	if($result == 1)
+if($action == 'load_locale') {
+	$query = "select * from location GROUP BY location.KEY";
 
-		echo "Your transaction is success!";
+	$result = tep_db_query($query);
+	$location = [];
+	while ( $element = tep_db_fetch_array($result)) {
+		$obj = new StdClass;
+		$obj->key = $element["KEY"];
+		$obj->location = $element["LOCATION"];
+		$obj->link = $element["LINK"];
+		array_push($location, $obj);
+	}
 
-	else
-
-		echo "There is problem with our transaction!<br>Please try it again!";
+	echo json_encode($location);
 }
 
 ?>
+

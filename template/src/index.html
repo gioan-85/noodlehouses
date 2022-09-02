@@ -37,10 +37,10 @@
       <div class="nav-bar-cover">
         <div class="nav-bar-dimmer"></div>
         <ul class="nav-bar">
-          <li class="is-MO"><span class="btn-close-menu"></span></li>
+          <li class="is-MO"><span class="btn-close"></span></li>
           <li class="nav-item active" data-content="section--home">Home</li>
           <li class="nav-item" data-content="section--bestsell">Best sell</li>
-          <li class="nav-item" data-content="section--menu">Menu</li>
+          <li class="nav-item btn-order-now" data-content="section--menu">Menu</li>
           <li class="nav-item" data-content="section--opentime">Open time</li>
           <li class="nav-item" data-content="section--map">Map</li>
         </ul>
@@ -53,7 +53,7 @@
       <div class="left-content">
         <img src="./images/pho-text.png" class="pho-text" alt="pho image text">
         <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-        <a class="btn btn-goto" data-content="section--menu">Go to menu now</a>
+        <a class="btn btn-goto btn-order-now" data-content="section--menu">Go to menu now</a>
       </div>
       <div class="right-content">
         <div class="main-img">
@@ -73,7 +73,7 @@
           <span class="sub-title">ABOUT</span><br>
           <span class="title fw-bold">Most popular.</span>
           <p>(Our food may contain or contact with allergens. Please let us know if you have any food allergies.)</p>
-          <a class="btn">Order now</a>
+          <a class="btn btn-order-now">Order now</a>
         </div>
       </div>
     </div>
@@ -87,8 +87,8 @@
           please choose restaurent location...
         </div>
         <ul class="location--list">
-          <li class="location--item" data-locale="1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8">1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8</li>
-          <li class="location--item" data-locale="4015 Hastings St, Burnaby, BC V5C 2J1">4015 Hastings St, Burnaby, BC V5C 2J1</li>
+          <li class="location--item" data-locale="1466">1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8</li>
+          <li class="location--item" data-locale="4015">4015 Hastings St, Burnaby, BC V5C 2J1</li>
         </ul>
       </div>
       <!-- <ul class="menu-list">
@@ -106,7 +106,7 @@
         <li class="menu-item">EXTRA</li>
       </ul> -->
       <div class="carousel-wrapper">
-        <div class="prod-item">
+        <!-- <div class="prod-item">
           <div class="wrapper">
             <div class="prod-img">
               <div class="prod-img--cover">
@@ -117,67 +117,7 @@
             <div class="prod-price fw-bold">$20 - $30</div>
             <a href="#" class="prod-link">Order now</a>
           </div>
-        </div>
-        <div class="prod-item">
-          <div class="wrapper">
-            <div class="prod-img">
-              <div class="prod-img--cover">
-                <img src="./images/prod-temp.jpg">
-              </div>
-            </div>
-            <div class="prod-name">Thai Dishes</div>
-            <div class="prod-price fw-bold">$20 - $30</div>
-            <a href="#" class="prod-link">Order now</a>
-          </div>
-        </div>
-        <div class="prod-item">
-          <div class="wrapper">
-            <div class="prod-img">
-              <div class="prod-img--cover">
-                <img src="./images/prod-temp.jpg">
-              </div>
-            </div>
-            <div class="prod-name">Thai Dishes</div>
-            <div class="prod-price fw-bold">$20 - $30</div>
-            <a href="#" class="prod-link">Order now</a>
-          </div>
-        </div>
-        <div class="prod-item">
-          <div class="wrapper">
-            <div class="prod-img">
-              <div class="prod-img--cover">
-                <img src="./images/prod-temp.jpg">
-              </div>
-            </div>
-            <div class="prod-name">Thai Dishes</div>
-            <div class="prod-price fw-bold">$20 - $30</div>
-            <a href="#" class="prod-link">Order now</a>
-          </div>
-        </div>
-        <div class="prod-item">
-          <div class="wrapper">
-            <div class="prod-img">
-              <div class="prod-img--cover">
-                <img src="./images/prod-temp.jpg">
-              </div>
-            </div>
-            <div class="prod-name">Thai Dishes</div>
-            <div class="prod-price fw-bold">$20 - $30</div>
-            <a href="#" class="prod-link">Order now</a>
-          </div>
-        </div>
-        <div class="prod-item">
-          <div class="wrapper">
-            <div class="prod-img">
-              <div class="prod-img--cover">
-                <img src="./images/prod-temp.jpg">
-              </div>
-            </div>
-            <div class="prod-name">Thai Dishes</div>
-            <div class="prod-price fw-bold">$20 - $30</div>
-            <a href="#" class="prod-link">Order now</a>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -302,6 +242,16 @@
     </div>
   </div>
   <!-- <script defer="defer" src="js/main.js"></script> -->
+  <div class="popup-location">
+    <di class="dimmer"></di>
+    <div class="wrapper">
+      <div class="btn-close"></div>
+      <ul class="location--list">
+        <li class="location--item" data-locale="1466">1466 Prairie Avenue, Port Coquitlam, BC V3B 5M8</li>
+        <li class="location--item" data-locale="4015">4015 Hastings St, Burnaby, BC V5C 2J1</li>
+      </ul>
+    </div>
+  </div>
 </body>
 
 </html>
